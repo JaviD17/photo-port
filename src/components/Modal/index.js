@@ -1,8 +1,6 @@
 import React from "react";
 
-function Modal({ currentPhoto }) {
-  console.log({ currentPhoto });
-
+function Modal({ currentPhoto, onClose }) {
   const { name, category, description, index } = currentPhoto;
 
   return (
@@ -14,7 +12,7 @@ function Modal({ currentPhoto }) {
           alt="current category"
         />
         <p>{description}</p>
-        <button type="button">Close this modal</button>
+        <button onClick={onClose} type="button">Close this modal</button>
       </div>
     </div>
   );
